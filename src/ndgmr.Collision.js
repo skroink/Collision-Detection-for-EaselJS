@@ -4,7 +4,7 @@
   Copyright (c) 2012 Olaf Horstmann, indiegamr.com
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
+  of this software and associated window.documentation files (the "Software"), to deal
   in the Software without restriction, including without limitation the rights
   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
   copies of the Software, and to permit persons to whom the Software is
@@ -32,12 +32,12 @@ this.ndgmr = this.ndgmr || {};
 
 (function() {
 
-  var collisionCanvas = document.createElement('canvas');
+  var collisionCanvas = window.document.createElement('canvas');
   var collisionCtx = collisionCanvas.getContext('2d');
       //collisionCtx.globalCompositeOperation = 'source-in';
       collisionCtx.save();
 
-  var collisionCanvas2 = document.createElement('canvas');
+  var collisionCanvas2 = window.document.createElement('canvas');
   var collisionCtx2 = collisionCanvas2.getContext('2d');
       collisionCtx2.save();
 
@@ -54,8 +54,8 @@ this.ndgmr = this.ndgmr || {};
   var checkPixelCollision = function(bitmap1, bitmap2, alphaThreshold, getRect) {
     //display the intersecting canvases for debugging
     if ( ndgmr.DEBUG || ndgmr.DEBUG_COLLISION ) { 
-      document.body.appendChild(collisionCanvas);
-      document.body.appendChild(collisionCanvas2);
+      window.document.body.appendChild(collisionCanvas);
+      window.document.body.appendChild(collisionCanvas2);
     }
     
     getRect = getRect || false;
